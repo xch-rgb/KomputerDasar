@@ -209,86 +209,121 @@
     </footer>
 
     <script>
-        // Data Hardware Interaktif
-        const hardwareData = [
-            {
-                id: 'cpu',
-                name: 'Processor (CPU)',
-                icon: 'cpu',
-                tag: 'Otak Komputer',
-                desc: 'Central Processing Unit (CPU) bertugas menjalankan instruksi, melakukan perhitungan, dan mengendalikan seluruh operasi di dalam komputer.',
-                analogy: '🧠 Otak Manusia: Mengambil keputusan dan melakukan hitungan.',
-                specs: 'Satuan Kecepatan: Gigahertz (GHz)'
+        // 1. Data Lengkap 6 Komponen Komputer
+          const hardwareData = {
+            cpu: {
+              title: "CPU (Central Processing Unit)",
+              image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600",
+              desc: "Otak utama komputer yang bertugas memproses semua instruksi, perhitungan, dan perintah dari software.",
+              analogy: "Sama seperti Otak Manusia yang mengendalikan seluruh anggota tubuh dan berpikir.",
+              spec: "Kecepatan diukur dalam GHz (Gigahertz) dan jumlah Core (misal: Quad-Core, Octa-Core)."
             },
-            {
-                id: 'ram',
-                name: 'Memori Utama (RAM)',
-                icon: 'memory-stick',
-                tag: 'Penyimpanan Sementara',
-                desc: 'Random Access Memory (RAM) menyimpan data sementara dari aplikasi yang sedang dibuka agar processor dapat mengaksesnya dengan cepat.',
-                analogy: 'Meja Kerja: Semakin luas mejanya, semakin banyak buku (aplikasi) yang bisa dibuka bersamaan.',
-                specs: 'Sifat: Volatile (data hilang jika listrik mati)'
+            ram: {
+              title: "RAM (Random Access Memory)",
+              image: "https://images.unsplash.com/photo-1562976540-1502c2145186?w=600",
+              desc: "Memori penyimpanan sementara yang digunakan CPU saat komputer sedang menyala dan menjalankan program.",
+              analogy: "Sama seperti Meja Kerja. Semakin luas mejanya, semakin banyak aplikasi yang bisa dibuka bersamaan.",
+              spec: "Kapasitas umum saat ini: 8GB, 16GB, hingga 32GB dengan tipe DDR4 atau DDR5."
             },
-            {
-                id: 'storage',
-                name: 'Penyimpanan (SSD / Harddisk)',
-                icon: 'hard-drive',
-                tag: 'Penyimpanan Permanen',
-                desc: 'Komponen untuk menyimpan file, foto, video, sistem operasi, dan program secara permanen dan tahan lama.',
-                analogy: '🗄️ Lemari Arsip: Tempat menyimpan semua dokumen berharga dengan rapi.',
-                specs: 'Sifat: Non-Volatile (data tetap tersimpan meski komputer mati)'
+            storage: {
+              title: "Storage (SSD / Harddisk)",
+              image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600",
+              desc: "Media penyimpanan permanen untuk menyimpan sistem operasi, foto, video, dokumen, dan aplikasi.",
+              analogy: "Sama seperti Lemari Arsip. Barang yang disimpan di sini tidak akan hilang meskipun komputer dimatikan.",
+              spec: "SSD jauh lebih cepat dibanding Harddisk (HDD) lama. Kapasitas populer: 256GB, 512GB, 1TB."
             },
-            {
-                id: 'motherboard',
-                name: 'Papan Induk (Motherboard)',
-                icon: 'circuit-board',
-                tag: 'Pusat Penghubung',
-                desc: 'Papan sirkuit utama tempat menempelnya semua komponen seperti CPU, RAM, GPU, serta konektor daya dan data.',
-                analogy: '🛣️ Sistem Jalan Raya: Menghubungkan satu tempat dengan tempat lain agar bisa berkomunikasi.',
-                specs: 'Menyediakan port USB, LAN, Audio, dll.'
+            motherboard: {
+              title: "Motherboard (Papan Induk)",
+              image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
+              desc: "Papan sirkuit utama tempat menghubungkan semua komponen komputer agar bisa saling berkomunikasi.",
+              analogy: "Sama seperti Sistem Saraf Pusat atau Jalan Raya Utama yang menghubungkan seluruh kota.",
+              spec: "Memiliki socket CPU, slot RAM, slot PCIe untuk VGA, dan berbagai port USB."
             },
-            {
-                id: 'gpu',
-                name: 'Kartu Grafis (GPU / VGA)',
-                icon: 'monitor-play',
-                tag: 'Pengolah Visual',
-                desc: 'Komponen khusus yang mengolah data gambar, grafik, dan video untuk ditampilkan ke layar monitor secara halus.',
-                analogy: '🎨 Seniman Visual: Memproses gambar & warna dengan detail yang indah.',
-                specs: 'Sangat penting untuk desain grafis & game 3D.'
+            gpu: {
+              title: "GPU / VGA Card (Kartu Grafis)",
+              image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600",
+              desc: "Komponen khusus yang mengolah visual dan grafis agar bisa ditampilkan ke layar monitor dengan mulus.",
+              analogy: "Sama seperti Seniman/Pelukis yang menggambar tampilan layar dengan sangat cepat.",
+              spec: "Sangat penting untuk editing video, desain 3D, dan game (contoh: NVIDIA RTX / AMD Radeon)."
             },
-            {
-                id: 'psu',
-                name: 'Power Supply (PSU)',
-                icon: 'zap',
-                tag: 'Sumber Daya Listrik',
-                desc: 'Mengubah arus listrik AC dari stopkontak menjadi arus DC yang sesuai dengan kebutuhan setiap komponen komputer.',
-                analogy: '❤️ Jantung: Mengalirkan daya (darah) ke seluruh organ komputer.',
-                specs: 'Satuan Daya: Watt'
+            psu: {
+              title: "PSU (Power Supply Unit)",
+              image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=600",
+              desc: "Komponen yang menyalurkan daya listrik dari stopkontak PLN ke seluruh komponen di dalam komputer.",
+              analogy: "Sama seperti Jantung yang memompa aliran darah ke seluruh bagian tubuh.",
+              spec: "Daya diukur dalam Watt (misal: 450W, 550W, 650W) dengan efisiensi sertifikasi 80 Plus."
             }
-        ];
+          };
 
-        // Data Perangkat Input, Output, Storage
-        const deviceData = {
-            input: [
-                { name: 'Keyboard', desc: 'Papan ketik untuk memasukkan huruf, angka, dan perintah.', icon: 'keyboard' },
-                { name: 'Mouse', desc: 'Alat penunjuk (pointer) untuk memilih menu di layar.', icon: 'mouse-pointer' },
-                { name: 'Microphone', desc: 'Memasukkan suara pengguna ke dalam komputer.', icon: 'mic' },
-                { name: 'Webcam', desc: 'Kamera untuk memasukkan gambar/video secara langsung.', icon: 'camera' },
-                { name: 'Scanner', desc: 'Mengubah dokumen kertas menjadi file digital.', icon: 'scan' }
-            ],
-            output: [
-                { name: 'Monitor', desc: 'Layar untuk menampilkan hasil proses berupa gambar/teks.', icon: 'tv' },
-                { name: 'Printer', desc: 'Mencetak dokumen digital ke media kertas.', icon: 'printer' },
-                { name: 'Speaker', desc: 'Mengeluarkan hasil olahan berupa suara/audio.', icon: 'volume-2' },
-                { name: 'Projector', desc: 'Menampilkan layar komputer ke dinding/layar lebar.', icon: 'projector' }
-            ],
-            storage: [
-                { name: 'Flashdisk', desc: 'Media simpan portabel yang mudah dibawa kemana-mana.', icon: 'usb' },
-                { name: 'SSD / HDD Internal', desc: 'Media simpan utama di dalam laptop atau PC.', icon: 'hard-drive' },
-                { name: 'Harddisk Eksternal', desc: 'Penyimpanan tambahan berkapasitas besar di luar PC.', icon: 'database' },
-                { name: 'MicroSD / Memory Card', desc: 'Kartu memori kecil yang biasa digunakan di HP atau kamera.', icon: 'credit-card' }
-            ]
-        };
+      // 2. Fungsi Utama Tampilan Detail
+          function selectHardware(key) {
+            const item = hardwareData[key];
+            const displayArea = document.getElementById("hardware-detail");
+
+            if (!item || !displayArea) return;
+
+            // Tampilkan gambar dan info komponen
+                displayArea.innerHTML = `
+                  <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-md transition-all">
+                    <img 
+                      src="${item.image}" 
+                      alt="${item.title}" 
+                      class="w-full h-56 object-cover rounded-xl mb-4 border border-slate-100 shadow-inner"
+                    />
+                    <h3 class="text-xl font-bold text-emerald-700 mb-2">${item.title}</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">${item.desc}</p>
+        
+                <div class="bg-emerald-50 p-3 rounded-lg border border-emerald-100 mb-3">
+                  <span class="font-bold text-emerald-800 text-sm">💡 Analogi Sederhana:</span>
+                  <p class="text-sm text-emerald-900 mt-1">${item.analogy}</p>
+                </div>
+
+                <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                  <span class="font-bold text-slate-700 text-sm">⚙️ Info Teknis:</span>
+                  <p class="text-sm text-slate-600 mt-1">${item.spec}</p>
+                </div>
+              </div>
+                `;
+
+        // Beri efek visual aktif pada tombol yang sedang dipilih
+            document.querySelectorAll('.hw-btn').forEach(btn => {
+              btn.classList.remove('border-emerald-600', 'bg-emerald-50', 'text-emerald-700');
+            });
+    
+            const activeBtn = document.getElementById(`btn-${key}`);
+            if (activeBtn) {
+              activeBtn.classList.add('border-emerald-600', 'bg-emerald-50', 'text-emerald-700');
+            }        
+          }
+
+          // 3. Jalankan Otomatis Saat Halaman Pertama Selesai Dimuat
+              document.addEventListener("DOMContentLoaded", () => {
+                selectHardware('cpu');
+              });
+            ];
+
+            // Data Perangkat Input, Output, Storage
+                const deviceData = {
+                    input: [
+                        { name: 'Keyboard', desc: 'Papan ketik untuk memasukkan huruf, angka, dan perintah.', icon: 'keyboard' },
+                        { name: 'Mouse', desc: 'Alat penunjuk (pointer) untuk memilih menu di layar.', icon: 'mouse-pointer' },
+                        { name: 'Microphone', desc: 'Memasukkan suara pengguna ke dalam komputer.', icon: 'mic' },
+                        { name: 'Webcam', desc: 'Kamera untuk memasukkan gambar/video secara langsung.', icon: 'camera' },
+                        { name: 'Scanner', desc: 'Mengubah dokumen kertas menjadi file digital.', icon: 'scan' }
+                ],
+                    output: [
+                        { name: 'Monitor', desc: 'Layar untuk menampilkan hasil proses berupa gambar/teks.', icon: 'tv' },
+                        { name: 'Printer', desc: 'Mencetak dokumen digital ke media kertas.', icon: 'printer' },
+                        { name: 'Speaker', desc: 'Mengeluarkan hasil olahan berupa suara/audio.', icon: 'volume-2' },
+                        { name: 'Projector', desc: 'Menampilkan layar komputer ke dinding/layar lebar.', icon: 'projector' }
+                ],
+                    storage: [
+                        { name: 'Flashdisk', desc: 'Media simpan portabel yang mudah dibawa kemana-mana.', icon: 'usb' },
+                        { name: 'SSD / HDD Internal', desc: 'Media simpan utama di dalam laptop atau PC.', icon: 'hard-drive' },
+                        { name: 'Harddisk Eksternal', desc: 'Penyimpanan tambahan berkapasitas besar di luar PC.', icon: 'database' },
+                        { name: 'MicroSD / Memory Card', desc: 'Kartu memori kecil yang biasa digunakan di HP atau kamera.', icon: 'credit-card' }
+                ]
+            };
 
         // Data Kuis
         const quizData = [
