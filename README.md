@@ -1,2 +1,0 @@
-# KomputerDasar
-Pengenalan Komputer Dasar
