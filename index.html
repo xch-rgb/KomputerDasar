@@ -8,7 +8,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Font Google (Plus Jakarta Sans) -->
+  <!-- Font Google -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
@@ -47,7 +47,7 @@
         <span class="bg-amber-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Modul Interaktif</span>
         <h2 class="text-2xl sm:text-4xl font-extrabold mt-3 leading-tight">Mengenal Komponen Utama Komputer</h2>
         <p class="mt-3 text-emerald-100 text-sm sm:text-base">
-          Komputer bekerja dengan menghubungkan berbagai komponen fisik. Klik tombol-tombol komponen di bawah untuk mempelajari fungsi dan analoginya secara interaktif!
+          Klik tombol-tombol komponen di bawah untuk mempelajari fungsi, contoh visual, dan analoginya secara interaktif!
         </p>
       </div>
     </section>
@@ -56,55 +56,55 @@
     <section id="hardware" class="scroll-mt-20">
       <div class="mb-6">
         <h3 class="text-xl sm:text-2xl font-bold text-slate-900">1. Komponen Utama (Hardware)</h3>
-        <p class="text-slate-500 text-sm">Pilih salah satu komponen di sebelah kiri untuk melihat gambar dan penjelasannya.</p>
+        <p class="text-slate-500 text-sm">Pilih salah satu komponen di sebelah kiri untuk melihat detail penjelasannya.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
         
         <!-- Tombol Komponen (Sisi Kiri) -->
         <div class="md:col-span-5 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-1 gap-3">
-          <button id="btn-cpu" onclick="selectHardware('cpu')" class="hw-btn p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:bg-emerald-50 transition text-left flex items-center gap-3 shadow-sm font-semibold text-slate-700">
-            <span class="text-2xl">🧠</span>
+          <button id="btn-cpu" onclick="selectHardware('cpu')" class="hw-btn p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:bg-emerald-50 transition text-left flex items-center gap-3 shadow-sm font-semibold text-slate-700 cursor-pointer">
+            <span class="text-3xl">🧠</span>
             <div>
               <div class="text-sm font-bold">CPU</div>
               <div class="text-xs text-slate-400 font-normal">Prosesor / Otak</div>
             </div>
           </button>
 
-          <button id="btn-ram" onclick="selectHardware('ram')" class="hw-btn p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:bg-emerald-50 transition text-left flex items-center gap-3 shadow-sm font-semibold text-slate-700">
-            <span class="text-2xl">⚡</span>
+          <button id="btn-ram" onclick="selectHardware('ram')" class="hw-btn p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:bg-emerald-50 transition text-left flex items-center gap-3 shadow-sm font-semibold text-slate-700 cursor-pointer">
+            <span class="text-3xl">⚡</span>
             <div>
               <div class="text-sm font-bold">RAM</div>
               <div class="text-xs text-slate-400 font-normal">Memori Sementara</div>
             </div>
           </button>
 
-          <button id="btn-storage" onclick="selectHardware('storage')" class="hw-btn p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:bg-emerald-50 transition text-left flex items-center gap-3 shadow-sm font-semibold text-slate-700">
-            <span class="text-2xl">💾</span>
+          <button id="btn-storage" onclick="selectHardware('storage')" class="hw-btn p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:bg-emerald-50 transition text-left flex items-center gap-3 shadow-sm font-semibold text-slate-700 cursor-pointer">
+            <span class="text-3xl">💾</span>
             <div>
               <div class="text-sm font-bold">Storage</div>
               <div class="text-xs text-slate-400 font-normal">SSD / Harddisk</div>
             </div>
           </button>
 
-          <button id="btn-motherboard" onclick="selectHardware('motherboard')" class="hw-btn p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:bg-emerald-50 transition text-left flex items-center gap-3 shadow-sm font-semibold text-slate-700">
-            <span class="text-2xl">🔌</span>
+          <button id="btn-motherboard" onclick="selectHardware('motherboard')" class="hw-btn p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:bg-emerald-50 transition text-left flex items-center gap-3 shadow-sm font-semibold text-slate-700 cursor-pointer">
+            <span class="text-3xl">🔌</span>
             <div>
               <div class="text-sm font-bold">Motherboard</div>
               <div class="text-xs text-slate-400 font-normal">Papan Induk</div>
             </div>
           </button>
 
-          <button id="btn-gpu" onclick="selectHardware('gpu')" class="hw-btn p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:bg-emerald-50 transition text-left flex items-center gap-3 shadow-sm font-semibold text-slate-700">
-            <span class="text-2xl">🎮</span>
+          <button id="btn-gpu" onclick="selectHardware('gpu')" class="hw-btn p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:bg-emerald-50 transition text-left flex items-center gap-3 shadow-sm font-semibold text-slate-700 cursor-pointer">
+            <span class="text-3xl">🎮</span>
             <div>
               <div class="text-sm font-bold">GPU / VGA</div>
               <div class="text-xs text-slate-400 font-normal">Kartu Grafis</div>
             </div>
           </button>
 
-          <button id="btn-psu" onclick="selectHardware('psu')" class="hw-btn p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:bg-emerald-50 transition text-left flex items-center gap-3 shadow-sm font-semibold text-slate-700">
-            <span class="text-2xl">🔋</span>
+          <button id="btn-psu" onclick="selectHardware('psu')" class="hw-btn p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:bg-emerald-50 transition text-left flex items-center gap-3 shadow-sm font-semibold text-slate-700 cursor-pointer">
+            <span class="text-3xl">🔋</span>
             <div>
               <div class="text-sm font-bold">PSU</div>
               <div class="text-xs text-slate-400 font-normal">Power Supply</div>
@@ -120,7 +120,7 @@
       </div>
     </section>
 
-    <!-- SECTION 2: Kategori Perangkat (Input, Output, Storage, Software, Brainware) -->
+    <!-- SECTION 2: Kategori Perangkat -->
     <section id="perangkat" class="scroll-mt-20">
       <div class="mb-6">
         <h3 class="text-xl sm:text-2xl font-bold text-slate-900">2. Sistem Komputer Lengkap</h3>
@@ -128,12 +128,10 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Input Device -->
         <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4">⌨️</div>
           <h4 class="font-bold text-lg text-slate-800 mb-2">Input Device (Masukan)</h4>
-          <p class="text-xs text-slate-500 mb-3">Perangkat untuk memasukkan perintah atau data ke komputer.</p>
+          <p class="text-xs text-slate-500 mb-3">Perangkat untuk memasukkan perintah ke komputer.</p>
           <ul class="text-xs space-y-1.5 text-slate-600 font-medium">
             <li class="bg-slate-50 p-2 rounded-lg">• Keyboard & Mouse</li>
             <li class="bg-slate-50 p-2 rounded-lg">• Microphone & Kamera Web</li>
@@ -141,11 +139,10 @@
           </ul>
         </div>
 
-        <!-- Output Device -->
         <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-4">🖥️</div>
           <h4 class="font-bold text-lg text-slate-800 mb-2">Output Device (Keluaran)</h4>
-          <p class="text-xs text-slate-500 mb-3">Perangkat untuk menampilkan hasil olahan data dari komputer.</p>
+          <p class="text-xs text-slate-500 mb-3">Perangkat untuk menampilkan hasil dari komputer.</p>
           <ul class="text-xs space-y-1.5 text-slate-600 font-medium">
             <li class="bg-slate-50 p-2 rounded-lg">• Monitor / Layar</li>
             <li class="bg-slate-50 p-2 rounded-lg">• Speaker & Headphone</li>
@@ -153,18 +150,16 @@
           </ul>
         </div>
 
-        <!-- Software & Brainware -->
         <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4">👤</div>
           <h4 class="font-bold text-lg text-slate-800 mb-2">Software & Brainware</h4>
-          <p class="text-xs text-slate-500 mb-3">Perangkat lunak dan manusia yang mengoperasikan sistem.</p>
+          <p class="text-xs text-slate-500 mb-3">Perangkat lunak dan pengguna sistem.</p>
           <ul class="text-xs space-y-1.5 text-slate-600 font-medium">
             <li class="bg-slate-50 p-2 rounded-lg">• <b>OS:</b> Windows, Linux, Android</li>
             <li class="bg-slate-50 p-2 rounded-lg">• <b>Aplikasi:</b> Word, Chrome, Canva</li>
-            <li class="bg-slate-50 p-2 rounded-lg">• <b>Brainware:</b> Programmer, User, Operator</li>
+            <li class="bg-slate-50 p-2 rounded-lg">• <b>Brainware:</b> Programmer, User</li>
           </ul>
         </div>
-
       </div>
     </section>
 
@@ -173,13 +168,11 @@
       <div class="mb-6">
         <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full uppercase">Evaluasi Mandiri</span>
         <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-2">Kuis Singkat Pengenalan Komputer</h3>
-        <p class="text-slate-600 text-sm">Uji pemahamanmu tentang komponen komputer di bawah ini!</p>
       </div>
 
-      <div id="quiz-container" class="space-y-6">
-        <!-- Soal 1 -->
+      <div class="space-y-6">
         <div class="bg-white p-5 rounded-2xl border border-emerald-100 shadow-sm">
-          <p class="font-bold text-slate-800 text-sm sm:text-base mb-3">1. Komponen yang sering disebut sebagai "Otak Komputer" yang bertugas memproses data adalah...</p>
+          <p class="font-bold text-slate-800 text-sm sm:text-base mb-3">1. Komponen yang sering disebut sebagai "Otak Komputer" adalah...</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
             <button onclick="checkAnswer(this, false, 's1')" class="q-btn-1 border p-3 rounded-xl text-left hover:bg-slate-50">A. RAM</button>
             <button onclick="checkAnswer(this, true, 's1')" class="q-btn-1 border p-3 rounded-xl text-left hover:bg-slate-50">B. CPU</button>
@@ -189,9 +182,8 @@
           <div id="feedback-s1" class="hidden mt-3 text-xs p-2 rounded-lg font-medium"></div>
         </div>
 
-        <!-- Soal 2 -->
         <div class="bg-white p-5 rounded-2xl border border-emerald-100 shadow-sm">
-          <p class="font-bold text-slate-800 text-sm sm:text-base mb-3">2. Perangkat mana yang berfungsi menyimpan file, dokumen, dan foto secara permanen?</p>
+          <p class="font-bold text-slate-800 text-sm sm:text-base mb-3">2. Perangkat untuk menyimpan file secara permanen adalah...</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
             <button onclick="checkAnswer(this, true, 's2')" class="q-btn-2 border p-3 rounded-xl text-left hover:bg-slate-50">A. SSD / Harddisk</button>
             <button onclick="checkAnswer(this, false, 's2')" class="q-btn-2 border p-3 rounded-xl text-left hover:bg-slate-50">B. RAM</button>
@@ -205,74 +197,75 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs mt-12">
-    <p>© Media Pembelajaran Informatika MTs / SMP. Dibuat untuk Kegiatan Pembelajaran Interaktif.</p>
+    <p>© Media Pembelajaran Informatika MTs / SMP.</p>
   </footer>
 
   <!-- JavaScript Program -->
   <script>
-    // Data Lengkap 6 Komponen Utama
     const hardwareData = {
       cpu: {
         title: "CPU (Central Processing Unit)",
-        image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600",
+        icon: "🧠",
+        color: "bg-amber-100 text-amber-600",
         desc: "Otak utama komputer yang bertugas memproses semua instruksi, perhitungan, dan perintah dari software.",
         analogy: "Sama seperti Otak Manusia yang mengendalikan seluruh anggota tubuh dan berpikir.",
         spec: "Kecepatan diukur dalam GHz (Gigahertz) dan jumlah Core (misal: Quad-Core, Octa-Core)."
       },
       ram: {
         title: "RAM (Random Access Memory)",
-        image: "https://images.unsplash.com/photo-1562976540-1502c2145186?w=600",
+        icon: "⚡",
+        color: "bg-blue-100 text-blue-600",
         desc: "Memori penyimpanan sementara yang digunakan CPU saat komputer sedang menyala dan menjalankan aplikasi.",
-        analogy: "Sama seperti Meja Kerja. Semakin luas mejanya, semakin banyak buku/aplikasi yang bisa dibuka bersamaan.",
+        analogy: "Sama seperti Meja Kerja. Semakin luas mejanya, semakin banyak aplikasi yang bisa dibuka bersamaan.",
         spec: "Kapasitas umum saat ini: 8GB, 16GB, hingga 32GB dengan tipe DDR4 atau DDR5."
       },
       storage: {
         title: "Storage (SSD / Harddisk)",
-        image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600",
-        desc: "Media penyimpanan permanen untuk menyimpan sistem operasi, foto, video, dokumen, dan file aplikasi.",
-        analogy: "Sama seperti Lemari Arsip. Barang yang disimpan di sini tidak akan hilang meskipun komputer dimatikan.",
+        icon: "💾",
+        color: "bg-emerald-100 text-emerald-600",
+        desc: "Media penyimpanan permanen untuk menyimpan sistem operasi, foto, video, dokumen, dan aplikasi.",
+        analogy: "Sama seperti Lemari Arsip. Barang yang disimpan tidak akan hilang meski komputer dimatikan.",
         spec: "SSD jauh lebih cepat dibanding Harddisk (HDD) lama. Kapasitas populer: 256GB, 512GB, 1TB."
       },
       motherboard: {
         title: "Motherboard (Papan Induk)",
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
+        icon: "🔌",
+        color: "bg-purple-100 text-purple-600",
         desc: "Papan sirkuit utama tempat menghubungkan seluruh komponen komputer agar bisa saling berkomunikasi.",
         analogy: "Sama seperti Sistem Saraf Pusat atau Jalan Raya Utama yang menghubungkan seluruh kota.",
         spec: "Memiliki socket CPU, slot RAM, slot PCIe untuk VGA, dan berbagai port USB."
       },
       gpu: {
         title: "GPU / VGA Card (Kartu Grafis)",
-        image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600",
+        icon: "🎮",
+        color: "bg-rose-100 text-rose-600",
         desc: "Komponen khusus yang mengolah visual dan grafis agar bisa ditampilkan ke layar monitor dengan mulus.",
         analogy: "Sama seperti Seniman/Pelukis yang menggambar tampilan layar dengan sangat cepat.",
         spec: "Sangat penting untuk editing video, desain 3D, dan game (contoh: NVIDIA RTX / AMD Radeon)."
       },
       psu: {
         title: "PSU (Power Supply Unit)",
-        image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=600",
+        icon: "🔋",
+        color: "bg-yellow-100 text-yellow-600",
         desc: "Komponen yang menyalurkan daya listrik dari stopkontak PLN ke seluruh komponen di dalam komputer.",
         analogy: "Sama seperti Jantung yang memompa aliran darah segar ke seluruh bagian tubuh.",
         spec: "Daya diukur dalam Watt (misal: 450W, 550W, 650W) dengan efisiensi sertifikasi 80 Plus."
       }
     };
 
-    // Fungsi Pilih Tombol Komponen
     function selectHardware(key) {
       const item = hardwareData[key];
       const displayArea = document.getElementById("hardware-detail");
 
       if (!item || !displayArea) return;
 
-      // Render Tampilan Komponen
       displayArea.innerHTML = `
         <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-md transition-all">
-          <img 
-            src="${item.image}" 
-            alt="${item.title}" 
-            class="w-full h-52 sm:h-60 object-cover rounded-xl mb-4 border border-slate-100 shadow-inner"
-          />
+          <div class="w-full h-48 rounded-xl mb-4 ${item.color} flex flex-col items-center justify-center border border-slate-100 shadow-inner">
+            <span class="text-7xl mb-2">${item.icon}</span>
+            <span class="font-bold text-sm tracking-wider uppercase opacity-80">${item.title.split(' ')[0]} Visual</span>
+          </div>
           <h4 class="text-xl font-bold text-emerald-700 mb-2">${item.title}</h4>
           <p class="text-slate-600 text-sm mb-4 leading-relaxed">${item.desc}</p>
           
@@ -288,7 +281,6 @@
         </div>
       `;
 
-      // Highlight Tombol Aktif
       document.querySelectorAll('.hw-btn').forEach(btn => {
         btn.classList.remove('border-emerald-600', 'bg-emerald-50', 'ring-2', 'ring-emerald-500/20');
       });
@@ -299,7 +291,6 @@
       }
     }
 
-    // Fungsi Kuis
     function checkAnswer(btn, isCorrect, soalId) {
       const buttons = document.querySelectorAll(`.q-btn-${soalId === 's1' ? '1' : '2'}`);
       const feedback = document.getElementById(`feedback-${soalId}`);
@@ -324,7 +315,6 @@
       }
     }
 
-    // Jalankan Otomatis Saat Halaman Dimuat
     document.addEventListener("DOMContentLoaded", () => {
       selectHardware('cpu');
     });
